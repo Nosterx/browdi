@@ -3,14 +3,18 @@
 BrowDi (short for Browser Dispatcher) is an utility application that acts as a browser manager. It allows users to choose which web browser to use when opening links clicked outside of a browser context, such as in messengers, PDF viewers, and other applications. BrowDi is written in rust with Relm4 and LibAdwaita.
 
 ## Features
+**Ability to set default browser for a domain**: 
++ Pic
+![изображение](https://github.com/Nosterx/browdi/assets/4470993/c1c2cefa-2d2f-49b1-b273-4df8fdaee5dd)
 
-- **Ability to set default browser for a domain**: 
-- **Shortcuts for every action**: 
-- <H> to show/hide shortcuts
-- <S> to show/hide full url
-- <M> to open menu
-- <Q> to quit
-- One of other letter will be assigned to every browser button
+**Shortcuts for every action**: 
++ `<H>` to show/hide shortcuts
++ `<S>` to show/hide full url
++ `<M>` to open menu
++ `<Q>` to quit
++ One of other letter will be assigned to every browser button
+![изображение](https://github.com/Nosterx/browdi/assets/4470993/9c4eba60-15ae-4192-9710-06dc1bb23ba1)
+
 
 ## Installation
 
@@ -45,9 +49,9 @@ To install BrowDi, follow these steps:
 6. BrowDi is now installed on your system and ready to use as a customizable default browser manager.
 
 ## Usage
-- Set as default browser in your system.
-- Click link.
-- Choose browser to open.
++ Set as default browser in your system.
++ Click link.
++ Choose browser to open.
 
 ## License
 
