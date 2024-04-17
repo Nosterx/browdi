@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schemalist>
+  <schema id="com.Nosterx.BrowDi" path="/com/Nosterx/BrowDi/">
+    <key name="browsers-default-for-domains" type="a{sas}">
+      <default>{}</default>
+      <summary>Default browsers for domains</summary>
+      <description>
+        Stores a mapping where each key is a name value from desktop file of a browser and each value is a vector of domains
+      </description>
+    </key>
+    <key name="show-full-url" type="b">
+      <default>false</default>
+      <summary>Show full url or just domain</summary>
+      <description>Stores a boolean that determines if should be shown full url or just domain</description>
+    </key>
+  </schema>
+</schemalist>

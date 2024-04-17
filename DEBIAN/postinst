@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+# Only run if this is a new installation, not an upgrade
+if [ "$1" = "configure" ]; then
+    # Run the command
+    echo "Running glib-compile-schemas..."
+    glib-compile-schemas /usr/share/glib-2.0/schemas
+fi
+
+# End of script

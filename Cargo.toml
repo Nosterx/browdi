@@ -1,0 +1,31 @@
+[package]
+name = "browdi"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "BrowDi - browser dispatcher for linux written in Rust using Relm4"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gio = "0.19.3"
+itertools = "0.12.1"
+relm4 = { version = "0.8.1", features = ["libadwaita", "macros"] }
+tracker = "0.2.1"
+
+[package.metadata.deb]
+maintainer = "<nosterx@gmail.com>"
+copyright = "2024, Nosterx"
+depends = "$auto"
+section = "Web Software"
+extended-description = "BrowDi (brower dispatcher) is a simple application that allows you to open links in different browsers. It is useful when you have multiple browsers installed and you want to open a link in a specific browser. BrowDi is a GTK application written in Rust using the Relm4 framework."
+priority = "optional"
+assets = [
+    # binary
+    ["target/release/browdi", "usr/bin/", "755"],
+    # assets
+    ["assets/256x256/browdi.png", "usr/share/icons/hicolor/256x256/apps/", "644"],
+    ["assets/browdi.desktop", "usr/share/applications/", "644"],
+    ["assets/com.Nosterx.BrowDi.gschema.xml", "usr/share/glib-2.0/schemas/", "644"],
+]
+maintainer-scripts = "DEBIAN"
