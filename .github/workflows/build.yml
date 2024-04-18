@@ -8,6 +8,8 @@ on:
 jobs:
   quickcheck:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/gtk-rs/gtk4-rs/gtk4:latest
     outputs:
       version: ${{ steps.rustversion.outputs.rustversion }}
     steps:
@@ -21,6 +23,8 @@ jobs:
     needs: quickcheck
     name: 'build-${{matrix.os}}'
     runs-on: ${{ matrix.os }}
+    container:
+      image: ghcr.io/gtk-rs/gtk4-rs/gtk4:latest
     strategy:
       matrix:
         os: [ubuntu-latest]
@@ -33,6 +37,8 @@ jobs:
   debbuild:
     needs: [build]
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/gtk-rs/gtk4-rs/gtk4:latest
     name: Amd64Deb
     steps:
     - uses: actions/checkout@v2
