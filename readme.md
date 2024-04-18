@@ -1,4 +1,4 @@
-# BrowDi (Browser Dispatcher)
+# BrowDi
 
 BrowDi (short for Browser Dispatcher) is an utility application that acts as a browser manager. It allows users to choose which web browser to use when opening links clicked outside of a browser context, such as in messengers, PDF viewers, and other applications. BrowDi is written in rust with Relm4 and LibAdwaita.
 
