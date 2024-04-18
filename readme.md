@@ -18,7 +18,7 @@ BrowDi (short for Browser Dispatcher) is an utility application that acts as a b
 
 ## Installation
 
-To install BrowDi, follow these steps:
+Debian (Ubuntu) package can be downloaded from the releases [page](https://github.com/Nosterx/browdi/releases). To build from source follow this steps:
 
 1. Make sure you have the Rust toolchain installed. If not, you can download and install it from the official Rust website: [Install Rust](https://www.rust-lang.org/tools/install).
 
