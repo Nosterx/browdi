@@ -13,7 +13,12 @@ jobs:
     outputs:
       version: ${{ steps.rustversion.outputs.rustversion }}
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
+    - uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: stable
+        override: true
     - run: cargo check
     - run: cargo pkgid
     - run: 'echo "$(cargo pkgid | cut -d# -f2)"'
@@ -29,7 +34,12 @@ jobs:
       matrix:
         os: [ubuntu-latest]
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
+    - uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: stable
+        override: true
     - name: Build
       run: cargo build
     - name: Run tests
@@ -41,12 +51,19 @@ jobs:
       image: ghcr.io/gtk-rs/gtk4-rs/gtk4:latest
     name: Amd64Deb
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
+    - uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: stable
+        override: true
+    - name: InstallCargoDeb
+      run: cargo install cargo-deb
     - name: BuildDeb
       id: debbuild
-      uses: ebbflow-io/cargo-deb-amd64-ubuntu@1.0
+      run: cargo deb
     - name: Upload Deb Artifact
       uses: actions/upload-artifact@v2
       with:
         name: amd64deb
-        path: ./target/x86_64-unknown-linux-musl/debian/*
+        path: ./target/debian/*
