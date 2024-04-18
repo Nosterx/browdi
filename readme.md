@@ -53,6 +53,9 @@ Debian (Ubuntu) package can be downloaded from the releases [page](https://githu
 + Click link.
 + Choose browser to open.
 
+## Kudos
+[Junction](https://github.com/sonnyp/Junction)
+
 ## License
 
 BrowDi is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
