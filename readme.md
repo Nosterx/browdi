@@ -56,6 +56,20 @@ Debian (Ubuntu) package can be downloaded from the releases [page](https://githu
 ## Kudos
 [Junction](https://github.com/sonnyp/Junction)
 
+## TODO
+- [ ] Autoset as default browser
+- [ ] Option to show/hide browser names on/under buttons
+- [ ] Add ability to display buttons on serveral rows
+
+## FAQ
+### How to make [QuteBrowser](https://github.com/qutebrowser/qutebrowser/tree/main) profiles generated with [QBPM](https://github.com/pvsr/qbpm/) (QuteBrowser Profile Manager) to be shown in the list of browsers displayed by BrowDi?
+- Copy/move profile's desktop file from `~/.local/share/applications/qbpm/PROFILE_NAME.desktop` to `~/.local/share/applications/PROFILE_NAME.desktop`
+- Add profile's desktop file into `~/.config/mimeapps.list`
+```
+x-scheme-handler/http=firefox_nightly.desktop;google-chrome.desktop;firefox_firefox.desktop;browdi.desktop;PROFILE_NAME.desktop;
+x-scheme-handler/https=firefox_nightly.desktop;google-chrome.desktop;firefox_firefox.desktop;browdi.desktop;PROFILE_NAME.desktop;
+```
+
 ## License
 
 BrowDi is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
