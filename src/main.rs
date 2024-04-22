@@ -175,6 +175,7 @@ impl Default for BrowDiInit {
     fn default() -> Self {
         let browsers = AppInfo::recommended_for_type("x-scheme-handler/http")
             .into_iter()
+            .sorted_by(|a, b| Ord::cmp(&a.name(), &b.name()))
             .filter(|app_info| app_info.id().is_some_and(|id| !EXCLUDED_APPS.contains(&id.as_str())))
             .collect();
         BrowDiInit {
