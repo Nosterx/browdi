@@ -11,6 +11,7 @@ BrowDi (short for Browser Dispatcher) is an utility application that acts as a b
 + `<H>` to show/hide shortcuts
 + `<S>` to show/hide full url
 + `<M>` to open menu
++ `<ESC>` to close menu
 + `<Q>` to quit
 + `<D>` to set browser as a default for a domain of current url
 + One of other letter will be assigned to every browser button
